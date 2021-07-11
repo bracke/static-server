@@ -74,13 +74,13 @@ Static Server is highly dependant on the Ada Web Server, which has been written 
 
 # BUGS
 Please submit bug reports and ideas as issues on the GitHub site of this project:
-https://github.com/bracke/static-server
-
+https://github.com/bracke/static-server/issues
 
 Also please consider submitting pull requests if You are able to fix bugs or otherwise improve on the project. This also includes improving the documentation, fixing spelling mistakes or improve install scripts.
 
 # SEE ALSO
 The source code for Static Server is available on GitHub:
+https://github.com/bracke/static-server
 
 You can read more about the Ada Web Server at https://docs.adacore.com/aws-docs/aws/index.html
 

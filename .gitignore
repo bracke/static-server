@@ -10,6 +10,7 @@ b__*
 *.a
 *.d
 *.log
+*.pem
 gnatinspect.*
 obj/
 lib/
@@ -25,7 +26,6 @@ lib/
 *.o
 *.deps
 *.pyc
-
 .build
 .gpsrcs
 releases
@@ -33,5 +33,4 @@ static
 releases/**
 debug
 debug/**
-
 static

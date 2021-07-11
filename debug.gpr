@@ -1,0 +1,39 @@
+with "aws";
+
+project Debug is
+
+  type OS_Type is ("macos", "unix", "windows");
+  OS : OS_Type := external ("os","macos");
+
+  for Default_Language use "Ada";
+  for Languages use ("Ada");
+  for Object_Dir use "debug";
+  for Exec_Dir use ".";
+
+  for Main use ("start.adb");
+
+    case OS is
+      when "macos" =>
+        for Source_Dirs use ("source/**", "os/macos/**");
+
+      when "unix" =>
+        for Source_Dirs use ("source/**", "os/unix/**");
+
+      when "windows" =>
+        for Source_Dirs use ("source/**", "os/windows/**");
+
+    end case;
+
+  package Builder is
+    for Default_Switches ("Ada") use ("-gnat12");
+    for Executable ("start.adb") use "static";
+    for Global_Configuration_Pragmas use "gnat_debug.adc";
+  end Builder;
+
+  package Compiler is
+    for Default_Switches("Ada") use ("-fstack-check","-gnata", "-gnatX", "-gnato", "-gnatv", "-gnatE");
+  end Compiler;
+
+
+
+end Debug;

@@ -130,7 +130,7 @@ do
   # Remove osfolder
   echo
   echo "Cleaning up"
-  #rm -rf $osfolder
+  rm -rf $osfolder
   echo Done
 done
 

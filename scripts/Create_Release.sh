@@ -59,7 +59,7 @@ OS=( unix macos windows )
 
 # Create release dir
 releasedir=releases/$version
-mkdir $releasedir
+mkdir -p $releasedir
 
 # Create version.ads based on argument
 printf "package Version is\n\tServe_Version: constant string := \"$versionReadable\";\nend Version;" > source/version.ads
@@ -91,7 +91,7 @@ do
   # Create subfolder in release folder
   osfolder=releases/$version/$i
   filefolder=os/$i/files
-  mkdir $osfolder
+  mkdir -p $osfolder
 
   # Copy osdefinitions
   cp os/$i/definitions.ads source/

@@ -1,7 +1,7 @@
 echo "Removing static server..."
 
 # Remove man page
-sudo rm /usr/share/man/man1/static.1.gz
+sudo rm /usr/share/man/man1/static.1
 sudo mandb
 
 # Remove binary
